@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manual de usuario de Control de Cursos Aprobados, FIUSAC. Aprendé a marcar cursos, usar prerrequisitos, calcular créditos y promedios, y guardar tu progreso.">
+  <title>Manual de usuario · Control de Cursos Aprobados · FIUSAC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/manual.css">
+</head>
+<body class="manual-page">
+
+  <header class="manual-topbar">
+    <a class="brand" href="index.html" aria-label="Volver a la aplicación">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10 12 5 2 10l10 5 10-5Z"/>
+          <path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>
+          <path d="M22 10v6"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>Control de Cursos</strong>
+        <small>FIUSAC · Redes de Estudio</small>
+      </span>
+    </a>
+    <div class="manual-topbar-actions">
+      <a class="btn btn-ghost btn-sm" href="index.html">Volver a la app</a>
+    </div>
+  </header>
+
+  <main class="manual-main">
+    <section class="manual-hero" aria-labelledby="manualTitle">
+      <p class="manual-eyebrow">Guía del proyecto</p>
+      <h1 id="manualTitle">Manual de usuario</h1>
+      <p class="manual-lead">
+        Todo lo que necesitás para marcar tus cursos, entender los prerrequisitos, llevar tus créditos CLAR
+        y calcular tu promedio. Sin cuentas, sin instalaciones y sin complicaciones.
+      </p>
+      <div class="manual-hero-actions">
+        <a class="btn btn-dark" href="index.html#sistemas">Abrir Sistemas</a>
+        <a class="btn btn-outline" href="index.html#industrial">Abrir Industrial</a>
+      </div>
+      <div class="manual-meta">
+        <span>Pensum CLAR 2022</span>
+        <span>Ingeniería en Ciencias y Sistemas · Ingeniería Industrial</span>
+        <span>Actualizado: noviembre 2026</span>
+      </div>
+    </section>
+
+    <div class="manual-layout">
+      <aside class="manual-toc" aria-label="Índice del manual">
+        <strong>En esta guía</strong>
+        <nav>
+          <a href="#que-es">1. Qué es esta herramienta</a>
+          <a href="#antes-de-empezar">2. Antes de empezar</a>
+          <a href="#entrar">3. Entrar y elegir carrera</a>
+          <a href="#pantalla">4. Entender la pantalla</a>
+          <a href="#estados">5. Estados de un curso</a>
+          <a href="#marcar">6. Marcar cursos</a>
+          <a href="#prerrequisitos">7. Prerrequisitos</a>
+          <a href="#creditos">8. Créditos y 300 CLAR</a>
+          <a href="#notas">9. Notas y promedio</a>
+          <a href="#practicas">10. Prácticas de 0 créditos</a>
+          <a href="#buscar">11. Buscar y filtrar</a>
+          <a href="#guardado">12. Guardado y respaldo</a>
+          <a href="#imprimir">13. Imprimir o PDF</a>
+          <a href="#reiniciar">14. Reiniciar progreso</a>
+          <a href="#celular">15. Usar en el celular</a>
+          <a href="#faq">16. Preguntas frecuentes</a>
+          <a href="#privacidad">17. Privacidad</a>
+          <a href="#glosario">18. Glosario</a>
+        </nav>
+        <a class="manual-toc-cta" href="index.html">Abrir la aplicación</a>
+      </aside>
+
+      <article class="manual-content">
+
+        <section class="manual-section" id="que-es">
+          <h2><span class="manual-section-num">01</span> Qué es esta herramienta</h2>
+          <p>
+            Es una página web para llevar tu avance académico en las redes de estudio de
+            <strong>Ingeniería en Ciencias y Sistemas</strong> y <strong>Ingeniería Industrial</strong>
+            de la FIUSAC, Pensum CLAR 2022.
+          </p>
+          <p>Con ella podés:</p>
+          <ul>
+            <li>Ver todos los cursos organizados por semestre.</li>
+            <li>Marcar los cursos que ya aprobaste o reprobaste.</li>
+            <li>Saber qué cursos se habilitan al aprobar sus prerrequisitos.</li>
+            <li>Consultar cuántos créditos llevás y cuántos te faltan para los 300 CLAR.</li>
+            <li>Calcular tu promedio ponderado.</li>
+            <li>Guardar tu avance y descargar un respaldo.</li>
+          </ul>
+          <p>No necesitás crear una cuenta ni instalar nada.</p>
+
+          <figure class="manual-figure">
+            <img src="docs/capturas/portada.png" alt="Portada de Control de Cursos Aprobados con las tarjetas de Sistemas e Industrial">
+            <figcaption>La portada te permite elegir entre las dos redes de estudio.</figcaption>
+          </figure>
+        </section>
+
+        <section class="manual-section" id="antes-de-empezar">
+          <h2><span class="manual-section-num">02</span> Antes de empezar</h2>
+          <p>Solo necesitás:</p>
+          <ul>
+            <li>Un navegador actualizado: Chrome, Edge, Firefox o Safari.</li>
+            <li>Conexión a internet para abrir la página por primera vez.</li>
+            <li>Un dispositivo donde guardar tu progreso. Funciona en computadora, tablet y celular.</li>
+          </ul>
+          <div class="manual-callout manual-callout-warning">
+            <span class="manual-callout-icon" aria-hidden="true">!</span>
+            <div>
+              <strong>Importante</strong>
+              <p>El progreso se guarda en <strong>este navegador</strong>, no en una cuenta. Si cambiás de dispositivo o borrás los datos del navegador, necesitás un respaldo exportado.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="manual-section" id="entrar">
+          <h2><span class="manual-section-num">03</span> Entrar y elegir carrera</h2>
+          <ol class="manual-steps">
+            <li>
+              <strong>Abrí la aplicación</strong>
+              <p>Entrá a <a href="index.html">la página principal</a> desde tu navegador.</p>
+            </li>
+            <li>
+              <strong>Elegí tu carrera</strong>
+              <p>En la portada vas a ver dos tarjetas: Ingeniería en Ciencias y Sistemas (naranja) e Ingeniería Industrial (verde).</p>
+            </li>
+            <li>
+              <strong>Abrí la red</strong>
+              <p>Hacé clic en <strong>Abrir red</strong> o en cualquiera de las tarjetas.</p>
+            </li>
+            <li>
+              <strong>Volvé cuando quieras</strong>
+              <p>La aplicación recuerda la última carrera que abriste. Para volver a la portada, usá el logo <strong>Control de Cursos</strong>.</p>
+            </li>
+          </ol>
+          <p>
+            También podés cambiar de carrera desde la barra superior con los botones
+            <strong>Sistemas</strong> e <strong>Industrial</strong>. El avance de cada carrera se guarda por separado.
+          </p>
+        </section>
+
+        <section class="manual-section" id="pantalla">
+          <h2><span class="manual-section-num">04</span> Entender la pantalla</h2>
+
+          <h3>Resumen superior</h3>
+          <ul>
+            <li><strong>Nombre de la carrera y pensum.</strong></li>
+            <li><strong>Anillo de avance:</strong> porcentaje de créditos CLAR completados.</li>
+            <li><strong>Créditos obtenidos:</strong> suma de créditos de cursos aprobados.</li>
+            <li><strong>Créditos restantes:</strong> lo que falta para llegar a 300.</li>
+            <li><strong>Cursos aprobados:</strong> cantidad de cursos aprobados sobre el total.</li>
+            <li><strong>Promedio ponderado:</strong> promedio de los cursos aprobados con nota.</li>
+            <li><strong>Barra de progreso:</strong> avance visual hacia los 300 CLAR.</li>
+          </ul>
+
+          <h3>Barra de herramientas</h3>
+          <ul>
+            <li><strong>Buscador:</strong> encontrá un curso por nombre o código. No importa si escribís con o sin tildes.</li>
+            <li><strong>Filtros:</strong> Todos, Aprobados, Disponibles, Bloqueados y Reprobados.</li>
+            <li><strong>Contador:</strong> cada filtro muestra cuántos cursos tiene.</li>
+          </ul>
+
+          <h3>Red de estudios</h3>
+          <p>
+            Es la malla curricular completa. Cada semestre aparece en una tarjeta con su número, nombre,
+            cantidad de cursos y créditos. Dentro de cada curso vas a ver el código, el nombre, los créditos,
+            el área, el estado, los prerrequisitos y los botones para marcarlo.
+          </p>
+
+          <div class="manual-figure-grid">
+            <figure class="manual-figure">
+              <img src="docs/capturas/sistemas-dashboard.png" alt="Tablero de Ingeniería en Ciencias y Sistemas" loading="lazy">
+              <figcaption>Sistemas: resumen, estadísticas y red de estudios.</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="docs/capturas/industrial-dashboard.png" alt="Tablero de Ingeniería Industrial" loading="lazy">
+              <figcaption>Industrial: mismo flujo, con el tema verde.</figcaption>
+            </figure>
+          </div>
+
+          <h3>Notas y promedio</h3>
+          <ul>
+            <li>Tabla con todos los cursos aprobados.</li>
+            <li>Campo para escribir la nota de cada curso.</li>
+            <li>Promedio ponderado, promedio simple, notas registradas y créditos con nota.</li>
+            <li>Botón <strong>Copiar resumen</strong> para pegar tu avance en WhatsApp, correo o un documento.</li>
+          </ul>
+        </section>
+
+        <section class="manual-section" id="estados">
+          <h2><span class="manual-section-num">05</span> Estados de un curso</h2>
+          <div class="state-grid">
+            <div class="state-card state-approved">
+              <strong>Aprobado</strong>
+              <p>Ya aprobaste el curso. Suma créditos y podés cargar la nota. Se pinta con el color vivo de la carrera.</p>
+            </div>
+            <div class="state-card state-available">
+              <strong>Disponible</strong>
+              <p>Podés marcarlo porque no tiene prerrequisitos pendientes. Aparece resaltado con borde.</p>
+            </div>
+            <div class="state-card state-locked">
+              <strong>Bloqueado</strong>
+              <p>Todavía te falta aprobar uno o más prerrequisitos. Se ve en gris y no se puede marcar.</p>
+            </div>
+            <div class="state-card state-failed">
+              <strong>Reprobado</strong>
+              <p>Marcaste el curso como reprobado. No suma créditos, pero podés aprobarlo después.</p>
+            </div>
+          </div>
+          <p>
+            Los cursos de <strong>primer semestre</strong> y los que <strong>no tienen prerrequisitos</strong>
+            están disponibles desde el inicio.
+          </p>
+        </section>
+
+        <section class="manual-section" id="marcar">
+          <h2><span class="manual-section-num">06</span> Marcar cursos</h2>
+
+          <h3>Aprobar un curso</h3>
+          <p>Tenés dos formas:</p>
+          <ol>
+            <li>Hacé <strong>clic sobre la tarjeta</strong> del curso disponible.</li>
+            <li>O usá el botón <strong>Aprobar</strong> dentro de la tarjeta.</li>
+          </ol>
+          <p>Al aprobarlo:</p>
+          <ul>
+            <li>La tarjeta cambia al color de la carrera.</li>
+            <li>Se suman sus créditos.</li>
+            <li>Se habilitan los cursos cuyos prerrequisitos ya están completos.</li>
+            <li>Aparece en la tabla de <strong>Notas y promedio</strong>.</li>
+          </ul>
+
+          <h3>Reprobar un curso</h3>
+          <ol>
+            <li>El curso debe estar <strong>disponible</strong>.</li>
+            <li>Usá el botón <strong>Reprobar</strong>.</li>
+            <li>La tarjeta queda en rojo y no suma créditos.</li>
+          </ol>
+          <p>Si después querés aprobarlo, hacé clic en la tarjeta o usá <strong>Aprobar</strong>.</p>
+
+          <h3>Quitar un curso</h3>
+          <p>
+            En un curso aprobado o reprobado, usá <strong>Quitar</strong> para dejarlo nuevamente como estaba
+            antes de marcarlo.
+          </p>
+
+          <div class="manual-callout manual-callout-warning">
+            <span class="manual-callout-icon" aria-hidden="true">!</span>
+            <div>
+              <strong>Cuidado</strong>
+              <p>Si quitás un curso, también podrían volver a bloquearse los cursos que dependían de él.</p>
+            </div>
+          </div>
+
+          <div class="manual-callout manual-callout-tip">
+            <span class="manual-callout-icon" aria-hidden="true">✓</span>
+            <div>
+              <strong>Regla importante</strong>
+              <p>No podés aprobar un curso bloqueado. Primero tenés que aprobar <strong>todos</strong> sus prerrequisitos.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="manual-section" id="prerrequisitos">
+          <h2><span class="manual-section-num">07</span> Prerrequisitos y desbloqueo</h2>
+          <p>Cada curso muestra una línea con sus prerrequisitos:</p>
+          <ul>
+            <li><strong>Sin prerrequisitos:</strong> el curso está disponible desde el inicio.</li>
+            <li><strong>Prerrequisitos:</strong> aparecen los códigos que necesita.</li>
+            <li><strong>Faltan:</strong> muestra en rojo o gris los códigos que todavía no aprobaste.</li>
+            <li><strong>Prerrequisitos completos:</strong> el curso se habilita automáticamente.</li>
+          </ul>
+          <p>Ejemplo:</p>
+          <pre class="manual-formula"><code>Faltan: 0101 0103</code></pre>
+          <p>
+            Significa que necesitás aprobar los cursos <code>0101</code> y <code>0103</code> antes de habilitar
+            ese curso. Cuando aprobás uno, la aplicación revisa toda la red y resalta los cursos que se desbloquearon.
+          </p>
+
+          <figure class="manual-figure">
+            <img src="docs/capturas/sistemas-pensum.png" alt="Red de estudios de Sistemas con cursos aprobados, disponibles y bloqueados" loading="lazy">
+            <figcaption>Los estados y los prerrequisitos se actualizan al instante.</figcaption>
+          </figure>
+        </section>
+
+        <section class="manual-section" id="creditos">
+          <h2><span class="manual-section-num">08</span> Créditos y avance a 300 CLAR</h2>
+          <p>
+            La red de estudios de Sistemas suma <strong>351 créditos</strong> y la de Industrial
+            <strong>349</strong>, pero el pensum se cierra con <strong>300 CLAR</strong>. Cada semestre equivale a 30 CLAR.
+          </p>
+          <p>La aplicación muestra:</p>
+          <ul>
+            <li><strong>Créditos obtenidos:</strong> suma de los créditos de todos los cursos aprobados.</li>
+            <li><strong>Créditos restantes:</strong> <code>300 − créditos obtenidos</code>.</li>
+            <li><strong>Porcentaje:</strong> avance hacia los 300 CLAR.</li>
+            <li><strong>Cursos aprobados:</strong> cantidad de cursos, no de créditos.</li>
+          </ul>
+          <p>
+            Si tus cursos aprobados superan los 300 créditos, el anillo y la barra se quedan en
+            <strong>100 %</strong>, pero el contador de créditos sigue mostrando el total real.
+          </p>
+          <div class="manual-callout manual-callout-tip">
+            <span class="manual-callout-icon" aria-hidden="true">i</span>
+            <div>
+              <strong>Prácticas</strong>
+              <p>Las prácticas de 0 créditos no suman créditos, pero sí cuentan como cursos aprobados.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="manual-section" id="notas">
+          <h2><span class="manual-section-num">09</span> Notas y promedio</h2>
+
+          <h3>Cargar una nota</h3>
+          <ol class="manual-steps">
+            <li>
+              <strong>Aprobá un curso</strong>
+              <p>El curso debe tener créditos mayores que 0.</p>
+            </li>
+            <li>
+              <strong>Escribí la nota</strong>
+              <p>En la tarjeta del curso o en la tabla de Notas y promedio, ingresá un número entre 0 y 100.</p>
+            </li>
+            <li>
+              <strong>Mirá el resultado</strong>
+              <p>El promedio se actualiza automáticamente.</p>
+            </li>
+          </ol>
+
+          <h3>Cómo se calcula el promedio ponderado</h3>
+          <pre class="manual-formula"><code>suma(nota × créditos) / suma(créditos con nota)</code></pre>
+          <p>Ejemplo:</p>
+          <div class="manual-table-wrap">
+            <table class="manual-table">
+              <thead>
+                <tr>
+                  <th>Curso</th>
+                  <th class="num">Créditos</th>
+                  <th class="num">Nota</th>
+                  <th class="num">Nota × créditos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Curso A</td>
+                  <td class="num">4</td>
+                  <td class="num">80</td>
+                  <td class="num">320</td>
+                </tr>
+                <tr>
+                  <td>Curso B</td>
+                  <td class="num">3</td>
+                  <td class="num">90</td>
+                  <td class="num">270</td>
+                </tr>
+                <tr>
+                  <td><strong>Total</strong></td>
+                  <td class="num"><strong>7</strong></td>
+                  <td class="num">—</td>
+                  <td class="num"><strong>590</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Promedio ponderado: <code>590 / 7 = 84.29</code>.</p>
+
+          <h3>Reglas del promedio</h3>
+          <ul>
+            <li>Solo participan cursos <strong>aprobados</strong>.</li>
+            <li>Solo participan cursos con <strong>créditos mayores que 0</strong>.</li>
+            <li>Solo participan cursos con <strong>nota registrada</strong>.</li>
+            <li>Un curso aprobado sin nota suma créditos, pero no afecta el promedio.</li>
+            <li>Las prácticas de 0 créditos nunca afectan el promedio.</li>
+            <li>Si la nota es menor que 61, la aplicación muestra una advertencia, pero guarda el valor.</li>
+            <li>El <strong>promedio simple</strong> es el promedio de las notas, sin considerar créditos. Es solo una referencia.</li>
+          </ul>
+          <p>
+            El botón <strong>Limpiar notas</strong> borra las notas de la carrera actual, pero conserva los cursos aprobados.
+          </p>
+        </section>
+
+        <section class="manual-section" id="practicas">
+          <h2><span class="manual-section-num">10</span> Prácticas de 0 créditos</h2>
+          <p>Las prácticas <strong>Iniciales</strong>, <strong>Intermedias</strong> y <strong>Finales</strong> tienen 0 créditos.</p>
+          <ul>
+            <li>Se marcan como <strong>aprobadas</strong> o <strong>reprobadas</strong>.</li>
+            <li>No tienen campo de nota.</li>
+            <li>No suman créditos.</li>
+            <li>No afectan el promedio.</li>
+            <li>Sí cuentan en la cantidad de cursos aprobados.</li>
+          </ul>
+          <p>En la tabla de notas aparecen con la leyenda <strong>No aplica</strong> en la columna de nota.</p>
+        </section>
+
+        <section class="manual-section" id="buscar">
+          <h2><span class="manual-section-num">11</span> Buscar y filtrar</h2>
+
+          <h3>Buscar</h3>
+          <ol>
+            <li>Escribí el nombre o el código en el buscador.</li>
+            <li>La lista se filtra al instante.</li>
+            <li>La búsqueda ignora tildes y mayúsculas: <code>fisica</code> encuentra <code>Física</code>.</li>
+            <li>Usá la <strong>×</strong> para limpiar la búsqueda.</li>
+          </ol>
+
+          <h3>Filtrar</h3>
+          <ul>
+            <li><strong>Todos:</strong> muestra la red completa.</li>
+            <li><strong>Aprobados:</strong> solo cursos aprobados.</li>
+            <li><strong>Disponibles:</strong> cursos que podés marcar ahora.</li>
+            <li><strong>Bloqueados:</strong> cursos con prerrequisitos pendientes.</li>
+            <li><strong>Reprobados:</strong> cursos marcados como reprobados.</li>
+          </ul>
+          <p>Los filtros y la búsqueda se pueden combinar.</p>
+        </section>
+
+        <section class="manual-section" id="guardado">
+          <h2><span class="manual-section-num">12</span> Guardado y respaldo</h2>
+
+          <h3>Guardado automático</h3>
+          <p>
+            La aplicación guarda el progreso automáticamente en el navegador. Arriba a la derecha aparece el estado
+            <strong>Guardado</strong> cuando terminó de guardar.
+          </p>
+          <p>Se guardan:</p>
+          <ul>
+            <li>La carrera activa.</li>
+            <li>Los cursos aprobados y reprobados.</li>
+            <li>Las notas.</li>
+            <li>La fecha de actualización.</li>
+          </ul>
+
+          <h3>Exportar un respaldo</h3>
+          <ol class="manual-steps">
+            <li>
+              <strong>Hacé clic en Exportar</strong>
+              <p>Es el botón con la flecha hacia abajo en la barra superior.</p>
+            </li>
+            <li>
+              <strong>Guardá el archivo</strong>
+              <p>Se descarga <code>control-cursos-fiusac-AAAA-MM-DD.json</code>. Guardalo en Google Drive, correo, USB o donde prefieras.</p>
+            </li>
+          </ol>
+          <p>El archivo incluye el progreso de <strong>ambas carreras</strong>.</p>
+
+          <h3>Importar un respaldo</h3>
+          <ol class="manual-steps">
+            <li>
+              <strong>Hacé clic en Importar</strong>
+              <p>Es el botón con la flecha hacia arriba.</p>
+            </li>
+            <li>
+              <strong>Elegí el archivo .json</strong>
+              <p>Seleccioná el respaldo que exportaste antes.</p>
+            </li>
+            <li>
+              <strong>Revisá el resultado</strong>
+              <p>La aplicación combina el respaldo con lo que ya tenés. Si un curso coincide, se usa el estado del archivo importado.</p>
+            </li>
+          </ol>
+
+          <div class="manual-callout manual-callout-tip">
+            <span class="manual-callout-icon" aria-hidden="true">★</span>
+            <div>
+              <strong>Consejo</strong>
+              <p>Exportá un respaldo antes de cambiar de dispositivo, antes de limpiar el navegador y antes de hacer cambios grandes.</p>
+            </div>
+          </div>
+
+          <h3>Copiar resumen</h3>
+          <p>
+            El botón <strong>Copiar resumen</strong> copia un texto con tus créditos, cursos aprobados,
+            promedio y materias. Después podés pegarlo donde quieras.
+          </p>
+        </section>
+
+        <section class="manual-section" id="imprimir">
+          <h2><span class="manual-section-num">13</span> Imprimir o guardar en PDF</h2>
+          <ol class="manual-steps">
+            <li>
+              <strong>Hacé clic en Imprimir</strong>
+              <p>Es el botón con el ícono de impresora en la barra superior.</p>
+            </li>
+            <li>
+              <strong>Elegí Guardar como PDF</strong>
+              <p>En el diálogo de impresión del navegador, seleccioná esa opción si querés un archivo.</p>
+            </li>
+            <li>
+              <strong>Ajustá el papel</strong>
+              <p>Podés cambiar el tamaño de hoja y los márgenes antes de guardar.</p>
+            </li>
+          </ol>
+          <p>El reporte incluye:</p>
+          <ul>
+            <li>Nombre de la carrera y pensum.</li>
+            <li>Fecha de generación.</li>
+            <li>Resumen de créditos y promedio.</li>
+            <li>Red de estudios completa con los estados.</li>
+            <li>Tabla de notas.</li>
+          </ul>
+          <p>
+            La impresión muestra <strong>todos los cursos</strong>, aunque tengas un filtro o una búsqueda activa.
+            Al cerrar el diálogo, la vista vuelve a como estaba.
+          </p>
+        </section>
+
+        <section class="manual-section" id="reiniciar">
+          <h2><span class="manual-section-num">14</span> Reiniciar el progreso</h2>
+          <ol class="manual-steps">
+            <li>
+              <strong>Hacé clic en Reiniciar</strong>
+              <p>Está en la barra superior. En el celular aparece como un ícono compacto.</p>
+            </li>
+            <li>
+              <strong>Leé la confirmación</strong>
+              <p>La aplicación te avisa qué se va a borrar.</p>
+            </li>
+            <li>
+              <strong>Confirmá</strong>
+              <p>Elegí <strong>Sí, reiniciar</strong> para borrar el progreso de la carrera actual.</p>
+            </li>
+          </ol>
+          <p>Se borran:</p>
+          <ul>
+            <li>Cursos aprobados.</li>
+            <li>Cursos reprobados.</li>
+            <li>Notas.</li>
+          </ul>
+          <p>
+            No se borra el progreso de la <strong>otra carrera</strong>. Si querés borrar todo,
+            repetí el proceso en ambas carreras.
+          </p>
+          <div class="manual-callout manual-callout-warning">
+            <span class="manual-callout-icon" aria-hidden="true">!</span>
+            <div>
+              <strong>Antes de reiniciar</strong>
+              <p>Exportá un respaldo si querés conservar tu avance.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="manual-section" id="celular">
+          <h2><span class="manual-section-num">15</span> Usar la aplicación en el celular</h2>
+          <p>La página está adaptada para pantallas pequeñas:</p>
+          <ul>
+            <li>La barra superior muestra el logo y los botones de acción arriba, y el selector de carrera abajo.</li>
+            <li>El resumen se acomoda en una columna.</li>
+            <li>La red de estudios se muestra en una sola columna.</li>
+            <li>La tabla de notas oculta la columna de estado para evitar desplazamientos horizontales.</li>
+            <li>Los botones de acción siguen disponibles, incluido <strong>Reiniciar</strong> como ícono.</li>
+          </ul>
+          <p>Para agregarla a la pantalla de inicio:</p>
+          <ul>
+            <li><strong>Android/Chrome:</strong> menú de tres puntos → <strong>Agregar a la pantalla principal</strong>.</li>
+            <li><strong>iPhone/Safari:</strong> botón Compartir → <strong>Agregar a la pantalla de inicio</strong>.</li>
+          </ul>
+
+          <div class="manual-figure-grid">
+            <figure class="manual-figure">
+              <img src="docs/capturas/portada-movil.png" alt="Portada de la aplicación en un celular" loading="lazy">
+              <figcaption>Portada en móvil.</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="docs/capturas/sistemas-movil.png" alt="Tablero de Sistemas en un celular" loading="lazy">
+              <figcaption>Tablero en móvil.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="manual-section" id="faq">
+          <h2><span class="manual-section-num">16</span> Preguntas frecuentes</h2>
+
+          <details class="manual-faq">
+            <summary>¿Necesito crear una cuenta?</summary>
+            <p>No. La aplicación no tiene cuentas ni contraseñas.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Dónde se guarda mi progreso?</summary>
+            <p>En el almacenamiento local (<code>localStorage</code>) de tu navegador, bajo la clave <code>control-cursos-fiusac:v1</code>.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Se sincroniza entre mi computadora y mi celular?</summary>
+            <p>No automáticamente. Para pasarlo, exportá el JSON en un dispositivo e importalo en el otro.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Qué pasa si borro el historial o los datos del navegador?</summary>
+            <p>Se puede borrar el progreso. Exportá un respaldo con frecuencia.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Funciona en modo incógnito?</summary>
+            <p>Sí, pero el progreso se borra al cerrar la ventana incógnita. No lo uses para guardar a largo plazo.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Puedo aprobar un curso bloqueado?</summary>
+            <p>No. Primero tenés que aprobar todos sus prerrequisitos.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Por qué un curso aprobado no cambia mi promedio?</summary>
+            <p>Porque no tiene nota, porque tiene 0 créditos o porque está reprobado. El promedio solo usa cursos aprobados, con créditos y con nota.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Por qué la práctica no tiene nota?</summary>
+            <p>Porque las prácticas de 0 créditos solo se aprueban o se reprueban y no afectan el promedio.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Qué significa que falten créditos si ya aprobé todos los cursos?</summary>
+            <p>La red puede sumar más de 300 créditos. La meta es cerrar 300 CLAR. Si ya llegaste, el anillo muestra 100 %.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Los datos son oficiales?</summary>
+            <p>Los cursos y prerrequisitos se tomaron de las redes de estudio oficiales del Pensum CLAR 2022, pero esta es una herramienta de apoyo. Confirmá cualquier duda con la Facultad de Ingeniería.</p>
+          </details>
+          <details class="manual-faq">
+            <summary>¿Puedo usar la página sin internet?</summary>
+            <p>Una vez cargada, puede seguir funcionando, pero para abrirla de nuevo necesitás conexión o una copia local. Si la descargás, abrí <code>index.html</code> en el navegador.</p>
+          </details>
+        </section>
+
+        <section class="manual-section" id="privacidad">
+          <h2><span class="manual-section-num">17</span> Privacidad</h2>
+          <ul>
+            <li>No hay servidor propio ni base de datos.</li>
+            <li>No se envían tus cursos ni notas a ningún lugar.</li>
+            <li>No hay analítica ni cookies de seguimiento.</li>
+            <li>El progreso queda en tu navegador.</li>
+            <li>El archivo JSON que exportás contiene solo la carrera activa, los estados, las notas y la fecha.</li>
+          </ul>
+        </section>
+
+        <section class="manual-section" id="glosario">
+          <h2><span class="manual-section-num">18</span> Glosario</h2>
+          <dl class="manual-glossary">
+            <div>
+              <dt>CLAR</dt>
+              <dd>Créditos del pensum de la FIUSAC.</dd>
+            </div>
+            <div>
+              <dt>Red de estudios</dt>
+              <dd>Organización de los cursos por semestre y prerrequisitos.</dd>
+            </div>
+            <div>
+              <dt>Prerrequisito</dt>
+              <dd>Curso que tenés que aprobar antes de habilitar otro.</dd>
+            </div>
+            <div>
+              <dt>Curso disponible</dt>
+              <dd>Curso que ya podés marcar porque no tiene prerrequisitos pendientes.</dd>
+            </div>
+            <div>
+              <dt>Curso bloqueado</dt>
+              <dd>Curso que todavía no podés marcar.</dd>
+            </div>
+            <div>
+              <dt>Promedio ponderado</dt>
+              <dd>Promedio que considera los créditos de cada curso.</dd>
+            </div>
+            <div>
+              <dt>Promedio simple</dt>
+              <dd>Promedio de las notas, sin considerar créditos.</dd>
+            </div>
+            <div>
+              <dt>Práctica de 0 créditos</dt>
+              <dd>Práctica que se aprueba o reprueba, pero no suma créditos ni afecta el promedio.</dd>
+            </div>
+            <div>
+              <dt>localStorage</dt>
+              <dd>Almacenamiento del navegador donde se guarda el progreso.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="manual-section" id="soporte" aria-label="Soporte">
+          <h2><span class="manual-section-num">?</span> ¿Problemas o sugerencias?</h2>
+          <p>
+            Si encontrás un error, podés abrir un <strong>issue</strong> en el repositorio:
+            <a href="https://github.com/jonathan-zamora/Control-de-Cursos-Aprobados/issues">github.com/jonathan-zamora/Control-de-Cursos-Aprobados/issues</a>.
+          </p>
+          <p>Incluí, si podés:</p>
+          <ul>
+            <li>La carrera y el curso.</li>
+            <li>El estado que esperabas y el que viste.</li>
+            <li>Una captura de pantalla.</li>
+            <li>El navegador y el dispositivo que usaste.</li>
+          </ul>
+        </section>
+
+        <section class="manual-cta" aria-label="Abrir la aplicación">
+          <div>
+            <strong>¿Listo para empezar?</strong>
+            <p>Abrí tu red de estudios y marcá tu primer curso.</p>
+          </div>
+          <a class="btn btn-primary" href="index.html">Abrir la aplicación</a>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="manual-footer">
+    <span>Control de Cursos Aprobados · FIUSAC</span>
+    <span>
+      <a href="index.html">Volver a la aplicación</a> ·
+      <a href="https://github.com/jonathan-zamora/Control-de-Cursos-Aprobados">Repositorio</a> ·
+      <a href="MANUAL-DE-USUARIO.md">Versión Markdown</a>
+    </span>
+  </footer>
+
+</body>
+</html>

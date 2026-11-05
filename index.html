@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Control de cursos aprobados de las redes de estudio de Ingeniería en Ciencias y Sistemas e Ingeniería Industrial, FIUSAC.">
+  <title>Control de Cursos Aprobados · FIUSAC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===================== PORTADA ===================== -->
+  <div id="landing" class="landing">
+    <div class="landing-glow landing-glow-orange" aria-hidden="true"></div>
+    <div class="landing-glow landing-glow-green" aria-hidden="true"></div>
+
+    <header class="landing-nav">
+      <a class="brand" href="#" aria-label="Inicio">
+        <span class="brand-mark" id="brandMarkLanding"></span>
+        <span class="brand-text">
+          <strong>Control de Cursos</strong>
+          <small>FIUSAC · Redes de Estudio</small>
+        </span>
+      </a>
+      <span class="landing-nav-note">
+        <span class="status-dot"></span>
+        Tu progreso se guarda en este navegador
+      </span>
+    </header>
+
+    <main class="landing-main">
+      <section class="hero">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Pensum CLAR 2022</p>
+        <h1>Tu ruta académica,<br><span class="gradient-text">clara y visual.</span></h1>
+        <p class="hero-sub">
+          Elegí tu carrera, marcá los cursos que ya aprobaste y descubrí al instante qué cursos se habilitan,
+          cuántos créditos te faltan y cómo va tu promedio.
+        </p>
+        <div class="hero-actions">
+          <a href="#sistemas" class="btn btn-dark btn-lg">
+            Explorar Sistemas
+            <span class="btn-icon" data-icon="arrowRight"></span>
+          </a>
+          <a href="#industrial" class="btn btn-outline btn-lg">
+            Explorar Industrial
+            <span class="btn-icon" data-icon="arrowRight"></span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>2</strong><span>redes de estudio</span></div>
+          <div class="hero-stat"><strong>300</strong><span>créditos CLAR</span></div>
+          <div class="hero-stat"><strong>10</strong><span>semestres</span></div>
+        </div>
+      </section>
+
+      <section class="career-grid" aria-label="Seleccioná tu carrera">
+        <a class="career-card career-systems" href="#sistemas" data-career-card="sistemas">
+          <span class="career-orbit career-orbit-1" aria-hidden="true"></span>
+          <span class="career-orbit career-orbit-2" aria-hidden="true"></span>
+          <div class="career-card-top">
+            <span class="career-icon" data-icon="code"></span>
+            <span class="career-badge">CLAR 2022</span>
+          </div>
+          <h2>Ingeniería en<br>Ciencias y Sistemas</h2>
+          <p class="career-desc">
+            Análisis, diseño y construcción de soluciones informáticas. Tres áreas:
+            metodología de sistemas, ciencias de la computación y desarrollo de software.
+          </p>
+          <div class="career-areas">
+            <span class="career-area"><i style="background:#32849a"></i> Metodología</span>
+            <span class="career-area"><i style="background:#ffc100"></i> Ciencias</span>
+            <span class="career-area"><i style="background:#76913b"></i> Desarrollo</span>
+          </div>
+          <div class="career-card-footer">
+            <div class="career-progress-wrap">
+              <span class="career-progress-label" data-career-progress="sistemas">0% completado</span>
+              <div class="career-progress-track"><span data-career-bar="sistemas"></span></div>
+            </div>
+            <span class="career-cta">Abrir red <span data-icon="arrowRight"></span></span>
+          </div>
+        </a>
+
+        <a class="career-card career-industrial" href="#industrial" data-career-card="industrial">
+          <span class="career-orbit career-orbit-1" aria-hidden="true"></span>
+          <span class="career-orbit career-orbit-2" aria-hidden="true"></span>
+          <div class="career-card-top">
+            <span class="career-icon" data-icon="factory"></span>
+            <span class="career-badge">CLAR 2022</span>
+          </div>
+          <h2>Ingeniería<br>Industrial</h2>
+          <p class="career-desc">
+            Optimización de procesos, productividad y gestión de recursos. Tres áreas:
+            investigación, producción y gestión.
+          </p>
+          <div class="career-areas">
+            <span class="career-area"><i style="background:#ffff00"></i> Investigación</span>
+            <span class="career-area"><i style="background:#00b050"></i> Producción</span>
+            <span class="career-area"><i style="background:#00b0f0"></i> Gestión</span>
+          </div>
+          <div class="career-card-footer">
+            <div class="career-progress-wrap">
+              <span class="career-progress-label" data-career-progress="industrial">0% completado</span>
+              <div class="career-progress-track"><span data-career-bar="industrial"></span></div>
+            </div>
+            <span class="career-cta">Abrir red <span data-icon="arrowRight"></span></span>
+          </div>
+        </a>
+      </section>
+
+      <section class="feature-strip" aria-label="Características">
+        <div class="feature">
+          <span class="feature-icon" data-icon="sparkles"></span>
+          <div><strong>Desbloqueo automático</strong><span>Aprobá un curso y se habilitan los que dependen de él.</span></div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon" data-icon="chart"></span>
+          <div><strong>Créditos y promedio</strong><span>Avance hacia los 300 CLAR y promedio ponderado en tiempo real.</span></div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon" data-icon="download"></span>
+          <div><strong>Guardado y reporte</strong><span>Tu avance queda en el navegador y podés imprimir un resumen.</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="landing-footer">
+      <span>Facultad de Ingeniería · Universidad de San Carlos de Guatemala</span>
+      <span>Los datos se guardan únicamente en tu navegador · <a class="footer-link" href="manual.html">Manual de usuario</a></span>
+    </footer>
+  </div>
+
+  <!-- ===================== TABLERO ===================== -->
+  <div id="dashboard" class="dashboard" hidden>
+    <header class="topbar">
+      <div class="topbar-left">
+        <a class="brand brand-compact" href="#" id="homeLink" aria-label="Volver a la portada">
+          <span class="brand-mark" id="brandMarkTop"></span>
+          <span class="brand-text">
+            <strong>Control de Cursos</strong>
+            <small>FIUSAC · Redes de Estudio</small>
+          </span>
+        </a>
+        <span class="topbar-divider" aria-hidden="true"></span>
+        <div class="career-switch" role="group" aria-label="Cambiar de carrera">
+          <button class="career-switch-btn" data-switch-career="sistemas" type="button">
+            <span class="switch-dot" style="background:#f79645"></span> Sistemas
+          </button>
+          <button class="career-switch-btn" data-switch-career="industrial" type="button">
+            <span class="switch-dot" style="background:#76933c"></span> Industrial
+          </button>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <span class="save-status" id="saveStatus">
+          <span class="save-dot"></span>
+          <span class="save-text">Guardado</span>
+        </span>
+        <button class="icon-btn" id="importBtn" type="button" title="Importar progreso" aria-label="Importar progreso" data-icon="upload"></button>
+        <button class="icon-btn" id="exportBtn" type="button" title="Exportar progreso" aria-label="Exportar progreso" data-icon="download"></button>
+        <button class="icon-btn" id="printBtn" type="button" title="Imprimir reporte" aria-label="Imprimir reporte" data-icon="printer"></button>
+        <button class="btn btn-ghost btn-sm reset-btn" id="resetBtn" type="button" title="Reiniciar progreso" aria-label="Reiniciar progreso">
+          <span data-icon="refresh"></span> Reiniciar
+        </button>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="print-header">
+        <h1>Control de Cursos Aprobados</h1>
+        <p id="printCareer"></p>
+        <p id="printDate"></p>
+      </div>
+
+      <section class="summary-card" aria-label="Resumen de avance">
+        <div class="summary-top">
+          <div class="summary-copy">
+            <p class="summary-kicker"><span class="status-dot"></span> <span id="careerPensum">Pensum CLAR 2022</span></p>
+            <h1 id="careerTitle">Ingeniería en Ciencias y Sistemas</h1>
+            <p class="summary-description" id="careerDescription"></p>
+            <div class="area-legend" id="areaLegend" aria-label="Áreas de la carrera"></div>
+          </div>
+          <div class="summary-ring">
+            <svg class="ring-svg" viewBox="0 0 140 140" aria-hidden="true">
+              <circle class="ring-bg" cx="70" cy="70" r="60"></circle>
+              <circle class="ring-fill" id="ringFill" cx="70" cy="70" r="60"></circle>
+            </svg>
+            <div class="ring-label">
+              <strong id="ringPct">0%</strong>
+              <span>completado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-stats">
+          <div class="stat">
+            <span class="stat-label">Créditos obtenidos</span>
+            <strong class="stat-value" id="statCredits">0</strong>
+            <span class="stat-sub">de 300 CLAR</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Créditos restantes</span>
+            <strong class="stat-value" id="statRemaining">300</strong>
+            <span class="stat-sub">para cerrar pensum</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Cursos aprobados</span>
+            <strong class="stat-value" id="statApproved">0</strong>
+            <span class="stat-sub" id="statApprovedSub">de 75</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Promedio ponderado</span>
+            <strong class="stat-value" id="statAverage">—</strong>
+            <span class="stat-sub" id="statAverageSub">sin notas</span>
+          </div>
+        </div>
+
+        <div class="progress-bar" role="progressbar" aria-label="Avance de créditos" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="summary-note" id="summaryNote"></p>
+      </section>
+
+      <section class="toolbar" aria-label="Filtros del pensum">
+        <div class="search-wrap">
+          <span class="search-icon" data-icon="search"></span>
+          <input id="searchInput" type="search" placeholder="Buscar por curso o código..." autocomplete="off" aria-label="Buscar curso">
+          <button class="search-clear" id="searchClear" type="button" aria-label="Limpiar búsqueda" hidden>&times;</button>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filtrar cursos">
+          <button class="filter-chip active" data-filter="all" type="button" aria-pressed="true">Todos <span class="chip-count" data-count="all">0</span></button>
+          <button class="filter-chip" data-filter="approved" type="button" aria-pressed="false">Aprobados <span class="chip-count" data-count="approved">0</span></button>
+          <button class="filter-chip" data-filter="available" type="button" aria-pressed="false">Disponibles <span class="chip-count" data-count="available">0</span></button>
+          <button class="filter-chip" data-filter="locked" type="button" aria-pressed="false">Bloqueados <span class="chip-count" data-count="locked">0</span></button>
+          <button class="filter-chip" data-filter="failed" type="button" aria-pressed="false">Reprobados <span class="chip-count" data-count="failed">0</span></button>
+        </div>
+        <div class="toolbar-hint" id="toolbarHint">Hacé clic en un curso disponible para aprobarlo.</div>
+      </section>
+
+      <section class="pensum-section" aria-label="Red de estudios">
+        <div class="section-heading">
+          <div>
+            <h2>Red de estudios</h2>
+            <p>Los cursos bloqueados se habilitan cuando aprobás todos sus prerrequisitos.</p>
+          </div>
+          <div class="section-heading-legend" id="areaLegendInline" aria-label="Referencia de áreas"></div>
+        </div>
+        <div id="pensumGrid" class="pensum-grid"></div>
+      </section>
+
+      <section class="grades-section" aria-label="Notas y promedio">
+        <div class="section-heading">
+          <div>
+            <h2>Notas y promedio</h2>
+            <p>Ingresá las notas de los cursos aprobados. Las prácticas de 0 créditos solo se marcan como aprobadas o reprobadas.</p>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="clearGradesBtn" type="button">
+            <span data-icon="trash"></span> Limpiar notas
+          </button>
+        </div>
+
+        <div class="grades-layout">
+          <div class="grades-table-wrap">
+            <table class="grades-table" id="gradesTable">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Curso</th>
+                  <th class="num">Créditos</th>
+                  <th>Nota</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="gradesBody"></tbody>
+            </table>
+            <div class="empty-state" id="gradesEmpty">
+              <span class="empty-icon" data-icon="book"></span>
+              <strong>Todavía no marcaste cursos como aprobados.</strong>
+              <span>Cuando apruebes un curso, va a aparecer acá para que le cargues la nota.</span>
+            </div>
+          </div>
+
+          <aside class="average-card">
+            <span class="average-eyebrow">Promedio ponderado</span>
+            <strong class="average-value" id="averageValue">—</strong>
+            <span class="average-note" id="averageNote">Ingresá notas para ver tu promedio.</span>
+            <div class="average-breakdown">
+              <div><span>Notas registradas</span><strong id="averageCount">0</strong></div>
+              <div><span>Créditos con nota</span><strong id="averageCredits">0</strong></div>
+              <div><span>Promedio simple</span><strong id="averageSimple">—</strong></div>
+            </div>
+            <button class="btn btn-primary btn-block" id="shareBtn" type="button">
+              <span data-icon="copy"></span> Copiar resumen
+            </button>
+            <p class="average-footnote">El promedio se calcula solo con cursos aprobados que tengan nota. Las prácticas de 0 créditos no lo afectan.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="info-section" aria-label="Información útil">
+        <div class="info-card">
+          <span class="info-icon" data-icon="info"></span>
+          <div>
+            <strong>Sobre los créditos</strong>
+            <p id="creditsNote"></p>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="info-icon" data-icon="graduation"></span>
+          <div>
+            <strong>Guardado automático</strong>
+            <p>Tu avance se guarda en este navegador. Podés exportarlo como respaldo e importarlo en otro dispositivo.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="dashboard-footer">
+      <span>Control de Cursos Aprobados · FIUSAC</span>
+      <span>Datos de las redes de estudio oficiales · Pensum CLAR 2022 · <a class="footer-link" href="manual.html">Manual de usuario</a></span>
+    </footer>
+  </div>
+
+  <!-- Utilidades -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast-icon" id="toastIcon"></span>
+    <span class="toast-message" id="toastMessage"></span>
+  </div>
+
+  <div class="modal-overlay" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-icon" data-icon="refresh"></div>
+      <h3 id="modalTitle">Reiniciar progreso</h3>
+      <p id="modalText">Se van a borrar los cursos aprobados, las notas y los cursos reprobados de esta carrera. Esta acción no se puede deshacer.</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="modalCancel" type="button">Cancelar</button>
+        <button class="btn btn-danger" id="modalConfirm" type="button">Sí, reiniciar</button>
+      </div>
+    </div>
+  </div>
+
+  <input type="file" id="importInput" accept="application/json,.json" hidden>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
