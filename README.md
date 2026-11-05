@@ -113,6 +113,7 @@ Control-de-Cursos-Aprobados/
 ├── index.html              # Aplicación principal
 ├── manual.html             # Manual de usuario dentro del sitio
 ├── favicon.svg             # Ícono del sitio
+├── apple-touch-icon.png    # Ícono para la pantalla de inicio en iOS
 ├── css/
 │   ├── styles.css          # Estilos de la aplicación
 │   └── manual.css          # Estilos del manual
